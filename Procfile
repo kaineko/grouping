@@ -1,1 +1,1 @@
-web: node snow.js
+web: node server.js
