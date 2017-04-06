@@ -10,8 +10,8 @@ window.onload = function () {
 	  function snowStart(x,y){
 		function draw(){
 			ctx.beginPath();
-			ctx.fillStyle = '#BBB' ;
-			ctx.strokeStyle= '#BBB' ;
+			ctx.fillStyle = 'rgba(150,150,150,0.7)' ;
+			ctx.strokeStyle= 'rgba(150,150,150,0.3)' ;
 			ctx.arc(x, y, 5, 0,2*Math.PI,true);
 			ctx.stroke();
 			ctx.fill();
