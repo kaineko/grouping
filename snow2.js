@@ -81,28 +81,33 @@ window.onload = function () {
 		yspeedCoe = 1+(Math.random()-Math.random())/2;
 		xspeedCoe = yspeedCoe*(Math.random()-Math.random());
 		birthRateChange();
-			console.log('birthRate'+birthRate);
-			console.log('x:'+xspeedCoe);
-			console.log('y:'+yspeedCoe);
+			console.log('birthRate : '+birthRate);
+			console.log('x : '+xspeedCoe);
+			console.log('y : '+yspeedCoe);
 		}
 		
-		var birthRate = 1700
+		var birthRate = 1600
 		function birthRateChange(){
 			if (Math.abs(xspeedCoe) >1.0 && yspeedCoe > 1.0  ){
-				birthRate = 400;
-			} else if (Math.abs(xspeedCoe) > 0.5 && yspeedCoe > 1.0  ){
 				birthRate = 300;
-			} else if (Math.abs(xspeedCoe) >= 0 && yspeedCoe > 1.0  ){
+			} else if (Math.abs(xspeedCoe) > 0.5 && yspeedCoe > 1.0  ){
 				birthRate = 200;
+			} else if (Math.abs(xspeedCoe) >= 0 && yspeedCoe > 1.0  ){
+				birthRate = 150;
 			} else if (yspeedCoe >= 0.7 && yspeedCoe < 1.0  ){
-				birthRate = 1100;
+				birthRate = 700;
 			} else if (yspeedCoe >= 0.6 && yspeedCoe < 0.7  ){
-				birthRate = 1400;
+				birthRate = 1000;
 			} else if (yspeedCoe <0.6 ){
 				birthRate = 1600;
  			}
 		}
-		setInterval(birthPlace,birthRate);
+		birthPlace();
+		function again(){
+		setTimeout(birthPlace,birthRate);
+		setTimeout(again,birthRate);
+		}
+		again();
 		setInterval(speedchange,10000);
     }
 }
