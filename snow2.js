@@ -86,7 +86,7 @@ window.onload = function () {
 			console.log('y:'+yspeedCoe);
 		}
 		
-		var birthRate = 2000
+		var birthRate = 1700
 		function birthRateChange(){
 			if (Math.abs(xspeedCoe) >1.0 && yspeedCoe > 1.0  ){
 				birthRate = 400;
@@ -97,9 +97,9 @@ window.onload = function () {
 			} else if (yspeedCoe >= 0.7 && yspeedCoe < 1.0  ){
 				birthRate = 1100;
 			} else if (yspeedCoe >= 0.6 && yspeedCoe < 0.7  ){
-				birthRate = 1600;
+				birthRate = 1400;
 			} else if (yspeedCoe <0.6 ){
-				birthRate = 2100;
+				birthRate = 1600;
  			}
 		}
 		setInterval(birthPlace,birthRate);
