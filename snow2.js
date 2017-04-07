@@ -95,11 +95,11 @@ window.onload = function () {
 			} else if (Math.abs(xspeedCoe) >= 0 && yspeedCoe > 1.0  ){
 				birthRate = 200;
 			} else if (yspeedCoe >= 0.7 && yspeedCoe < 1.0  ){
-				birthRate = 1100;
+				birthRate = 2000;
 			} else if (yspeedCoe >= 0.6 && yspeedCoe < 0.7  ){
-				birthRate = 1600;
+				birthRate = 2500;
 			} else if (yspeedCoe <0.6 ){
-				birthRate = 4000;
+				birthRate = 6000;
  			}
 		}
 		setInterval(birthPlace,birthRate);
