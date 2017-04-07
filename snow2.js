@@ -99,10 +99,10 @@ window.onload = function () {
 			} else if (yspeedCoe >= 0.6 && yspeedCoe < 0.7  ){
 				birthRate = 1600;
 			} else if (yspeedCoe <0.6 ){
-				birthRate = 3000;
+				birthRate = 4000;
  			}
 		}
 		setInterval(birthPlace,birthRate);
-		setInterval(speedchange,3000);
+		setInterval(speedchange,10000);
     }
 }
