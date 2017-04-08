@@ -34,7 +34,7 @@ window.onload = function () {
 			var xBlur = Math.random()-Math.random();
 			var yBlur = Math.random();
 			var xSpeed = xspeedCoe+xBlur;
-			var ySpeed = yspeedCoe+yBlur;
+			var ySpeed = 2*yspeedCoe+yBlur;
 			if(x >= 0 && x <= w && y >= 0 && y <= h){
 				clear();
 				x += xSpeed;
