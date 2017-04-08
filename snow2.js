@@ -33,8 +33,8 @@ window.onload = function () {
 		function move(){
 			var xBlur = Math.random()-Math.random();
 			var yBlur = Math.random();
-			var xSpeed = xspeedCoe+xBlur;
-			var ySpeed = 2*yspeedCoe+yBlur;
+			var xSpeed = 1.5*(xspeedCoe+xBlur);
+			var ySpeed = 1.5*(yspeedCoe+yBlur);
 			if(x >= 0 && x <= w && y >= 0 && y <= h){
 				clear();
 				x += xSpeed;
