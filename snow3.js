@@ -252,7 +252,7 @@ window.onload = function () {
 		function beamStart(){
 			ctx.fillStyle="#F00";
 			ctx.fillRect(beamX,beamY,boxWidth/2,boxHeight/2);
-			setTimeout(beamMove,200);
+			setTimeout(beamMove,50);
 		}
 		function beamMove(){
 			beamY -= 20;
