@@ -89,17 +89,17 @@ window.onload = function () {
 		var birthRate = 1600
 		function birthRateChange(){
 			if (Math.abs(xspeedCoe) >1.0 && yspeedCoe > 1.0  ){
-				birthRate = 400;
+				birthRate = 800;
 			} else if (Math.abs(xspeedCoe) > 0.5 && yspeedCoe > 1.0  ){
-				birthRate = 350;
+				birthRate = 650;
 			} else if (Math.abs(xspeedCoe) >= 0 && yspeedCoe > 1.0  ){
-				birthRate = 250;
+				birthRate = 550;
 			} else if (yspeedCoe >= 0.7 && yspeedCoe < 1.0  ){
-				birthRate = 700;
+				birthRate = 900;
 			} else if (yspeedCoe >= 0.6 && yspeedCoe < 0.7  ){
-				birthRate = 1000;
+				birthRate = 1200;
 			} else if (yspeedCoe <0.6 ){
-				birthRate = 1600;
+				birthRate = 1800;
  			}
 		}
 		birthPlace();
