@@ -68,7 +68,7 @@ window.onload = function () {
 		 
 		 
 		  //ビームの当たり判定を作成 
-		 setInterval(checkSnowcrash,100);
+		 setInterval(checkSnowcrash,10);
 		function checkSnowcrash(){
 			var imagedata1 = ctx.getImageData(x-size,y-size,1,1);
 			var imagedata2 = ctx.getImageData(x-size,y,1,1);
