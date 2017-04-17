@@ -6,7 +6,7 @@ var port = process.env.PORT || 8080,
 
 http.createServer(function(request,response){
 	if (request.url ==='/'){
-		request.url = '/snow3.html';
+		request.url = '/snow2.html';
 	}
 	var x = url.parse(request.url,true);
 	var fullpath = path.resolve(__dirname,'.'+x.pathname);
