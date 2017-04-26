@@ -10,7 +10,7 @@ $(document).ready(function(){
 				if(($('#fungus').find('.fungus').length) === 5){
 					if(($('#spirochaete').find('.spirochaete').length) === 3){
 						if(($('#protozoan').find('.protozoan').length) === 5){
-							alert('clear');
+							alert('正解です！お疲れさまでした！');
 						}
 					}		
 				}
