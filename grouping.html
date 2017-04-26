@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>仲間分けテスト</title>
+		<link rel = "stylesheet" href = "grouping.css">
+		<script src = "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<script src = "grouping.js"></script>
+	</head>
+	<body>
+		<p>カードをドラッグして	正しく分類して下さい</p>
+		<div>
+			<span>真菌</span>
+			<ul id = "fungus" class = "tasks">
+				<li class = "fungus elem">クリプトコックス</li>
+				<li class = "fungus elem">カンジダ</li>
+				<li class = "fungus elem">アスペルギルス</li>
+				<li class = "fungus elem">ニューモシスチス・イロベチ</li>
+				<li class = "fungus elem">ムコール症</li>
+			</ul>
+		</div>
+		<div>
+			<span>スピロヘータ</span>
+			<ul id = "spirochaete" class = "tasks">
+				<li class = "protozoan elem">赤痢アメーバ</li>
+				<li class = "spirochaete elem">ボレリア</li>
+				<li class = "spirochaete elem">レプトスピラ</li>
+				<li class = "spirochaete elem">トレポネーマ</li>
+			</ul>
+		</div>
+		<div>
+			<span>原虫</span>
+			<ul id = "protozoan" class = "tasks">
+				<li class = "protozoan elem">マラリア</li>
+				<li class = "protozoan elem">トキソプラズマ</li>
+				<li class = "protozoan elem">トリコモナス</li>
+				<li class = "protozoan elem">クリプトスポリジウム</li>
+			</ul>
+		</div>
+	</body>
+</html>
