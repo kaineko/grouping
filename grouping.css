@@ -5,7 +5,11 @@ p{
 	text-align: center;
 	margin-bottom:30px;
 }
-div{
+#main-contens{
+	text-align:center;
+}
+
+.attr{
 	float:left;
 	text-align: center;
 }
