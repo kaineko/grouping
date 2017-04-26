@@ -1,1 +1,42 @@
 
+@charset "UTF-8";
+
+p{
+	text-align: center;
+}
+div{
+	float:left;
+	text-align: center;
+}
+.tasks {
+	background-color:#CFF;
+	border:1px solid #000;
+	min-height:55px;
+	width:225px;
+	margin:0 5px;
+	padding:10px;
+}
+
+.elem{
+	list-style-type:none;
+	background-color:#FFF;
+	border:1px solid #99C;
+	font-size:14px;
+	height:48px;
+	line-height:48px;
+	width:200px;
+	margin-bottom:5px;
+	padding:10px;
+}
+
+.on_tasks{
+	list-style-type:none;
+	background-color:#EEE;
+	height:55px;
+	width:170px;
+	margin-bottom:5px;
+}
+	
+	
+
+}
