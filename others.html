@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src = "jquery.js"></script>
+    <script src = "jqueryUI.js"></script>
+    <script src= "jqueryuiA.js"></script>
+	<script src = "grouping2.js"></script>
+</head>
+<body>
+    <p>カードをドラッグして    正しく分類して下さい</p>
+	<div id = "main-contents">
+		<div class = "attr">
+			<span>真菌</span>
+			<br><br>
+			<ul id = "fungus" class = "tasks">
+			</ul>
+		</div>
+		<div class = "attr">
+			<span>スピロヘータ</span>
+			<br><br>
+			<ul id = "spirochaete" class = "tasks">
+			</ul>
+		</div>
+		<div class = "attr">
+			<span>原虫</span>
+			<br><br>
+			<ul id = "protozoan" class = "tasks">
+			</ul>
+		</div>
+        <div id = "check" class = "attr">
+			<ul id = "checkContents" class = "tasks">
+                分からない時はこちらへドラックしてください
+			</ul>
+		</div>
+        <div id = "box" class = "attr">
+			<ul id = "boxContents" class = "tasks">
+			</ul>
+		</div>
+    </div>
+     <img id = "menu" src="menubutton.jpg"/>
+    <div id = "left">
+        <div id = "panel"> 
+            <div id = "homepage">
+                <span>Home</span>
+            </div>
+            <div id = "bacteriumpage">
+                <span>細菌</span>
+            </div>
+            <div id = "otherspage">
+                <span>真菌<br>スピロヘータ<br>原虫</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
