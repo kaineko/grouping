@@ -12,7 +12,7 @@ http.createServer(function(request,response){
 	var fullpath = path.resolve(__dirname,'.'+x.pathname);
 	if (fs.existsSync(fullpath)){
 		var ext = path.extname(fullpath).toLowerCase();
-		if(ext.match(/\.(png|jpg|jpeg|gif|html|css|js|ico)$/)){
+		if(ext.match(/\.(png|jpg|jpeg|gif|html|css|js)$/)){
 		   response.writeHead(200,{'Content-type':'text/html'});
 		   var strm = fs.createReadStream(fullpath);
 			strm.pipe(response);
