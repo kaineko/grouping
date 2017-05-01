@@ -13,7 +13,7 @@ $(document).ready(function(){
         }
     });
     $('#homepage').click(function(){
-        window.location.href = 'index.html';
+        window.location.href = 'grouping.html';
     })
     $('#bacteriumpage').click(function(){
         window.location.href = 'Bacterium.html';
