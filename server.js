@@ -13,7 +13,7 @@ http.createServer(function(request,response){
 	if (fs.existsSync(fullpath)){
 		var ext = path.extname(fullpath).toLowerCase();
 		if(ext.match(/\.(png|jpg|jpeg|gif|html|css|js|ico)$/)){
-		   response.writeHead(200,{'Content-type':'text/html'});
+		 //  response.writeHead(200,{'Content-type':'text/html'});
 		   var strm = fs.createReadStream(fullpath);
 			strm.pipe(response);
 		} else {
