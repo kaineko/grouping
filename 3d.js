@@ -4,9 +4,13 @@ var args = {
 	cam: null,
 	scn: null,
 	lt: null,
+	lt2:null,
+	anlt:null,
 	cube: null,
 	cube2: null,
 	cube3:null,
+	cube4:null,
+	wall:null,
 	renderer: null
 }
 
@@ -19,12 +23,21 @@ function set_renderer(){
 	document.getElementById('cv').appendChild(args.renderer.domElement);
 }
 
+	var cameraX = 0;
+	var cameraY = 0;
+	var cameraZ = 0;
+	var cameraToX = 0;
+	var cameraToY = 0;
+	var cameraToZ = 0;
+
 function camera(){
 	args.cam = new THREE.PerspectiveCamera (100, args.w/args.h);
-	args.cam.position.x = 0;
-	args.cam.position.y = 0;
-	args.cam.position.z = 100;
-	args.cam.lookAt({x: 0,y: 0,z: 0})
+	
+	args.cam.position.x = cameraX;
+	args.cam.position.y = cameraY;
+	args.cam.position.z = cameraY;
+	
+	args.cam.lookAt({x: cameraX - cameraToX,y: cameraY - cameraToY,z: cameraZ - cameraToX })
 }
 
 function scene(){
@@ -33,8 +46,16 @@ function scene(){
 
 function light(){
 	args.lt = new THREE.DirectionalLight();
-	args.lt.position.set(0, 10,0);
+	args.lt.position.set(0, 50,0);
 	args.scn.add(args.lt);
+	
+	args.lt2 = new THREE.DirectionalLight(0xffffff);
+	args.lt2.position.set(0, 1,0);
+	args.scn.add(args.lt2);
+	
+	args.anlt = new THREE.AmbientLight(0xFFFFFF,0.5);
+	args.scn.add(args.anlt);
+	
 }
 
 function set_obj(){
@@ -46,19 +67,38 @@ function set_obj(){
 	args.cube.position.set(0,0,0);
 	args.scn.add(args.cube);
 	
+	
 	args.cube2 = new THREE.Mesh(
 		new THREE.CubeGeometry(30,30,30),
 		new THREE.MeshLambertMaterial({color:0x66FF66})
 	);
-	args.cube2.position.set(40,20,-20);
+	args.cube2.position.set(0,70,-200);
 	args.scn.add(args.cube2);
+	
+	
 	
 	args.cube3 = new THREE.Mesh(
 		new THREE.CubeGeometry(100,20,30),
 		new THREE.MeshLambertMaterial({color:0xFF6600})
 	)
-	args.cube3.position.set(100,0,-100);
+	args.cube3.position.set(-199,0,-300);
 	args.scn.add(args.cube3);
+	
+	args.cube4 = new THREE.Mesh(
+		new THREE.CubeGeometry(999999,0,999999),
+		new THREE.MeshLambertMaterial({color:0xFF66FF})
+	)
+	args.cube4.position.set(0, -200, 0);
+	args.scn.add(args.cube4);
+	
+	args.wall = new THREE.Mesh(
+		new THREE.CubeGeometry(0,999999,999999),
+		new THREE.MeshLambertMaterial({color:0xFF0000})
+	)
+	args.wall.position.set(-200, 0, 0);
+	args.scn.add(args.wall);
+	
+	
 }
 
 
@@ -71,14 +111,13 @@ window.onload = function(){
 	
 	args.renderer.render(args.scn, args.cam);
 	
-	setInterval(function(){
+	
+setInterval(function(){
 		args.cube.rotation.x += 0.05;
 		args.cube.rotation.y += 0.10;
 		args.cube3.rotation.x += 0.90;
 		args.cube3.rotation.y += 	0;
-		args.renderer.render(args.scn,args.cam);
 	},30);
-	
 	
 	var keyStatus = [0,0,0];
 	
@@ -97,6 +136,9 @@ window.onload = function(){
 		if(e.key === 'w'){
 			keyStatus[2] = -1;
 		}
+		if(e.key === 'k'){
+			keyStatus[1] = -1;
+		}
 	}
 	
 	setInterval(function(){
@@ -104,7 +146,9 @@ window.onload = function(){
 			args.cam.position.x += 10;
 		}
 		if(keyStatus[0] === -1){
-			args.cam.position.x -= 10;
+			if(args.cam.position.x > -190){
+				args.cam.position.x -= 10;
+			}
 		}
 		if(keyStatus[2] === 1){
 			args.cam.position.z += 10;
@@ -114,6 +158,9 @@ window.onload = function(){
 		}
 		if(keyStatus[1] === 1){
 			args.cam.position.y += 10;
+		}
+		if(keyStatus[1] === -1){
+			args.cam.position.y -= 10;
 		}
 	},50)
 	
@@ -130,6 +177,9 @@ window.onload = function(){
 		}
 		if(e.key === 'w'){
 			keyStatus[2] = 0;
+		}
+		if(e.key === 'k'){
+			keyStatus[1] = 0;
 		}
 		if(e.key === 'Shift'){
 			keyStatus[1] = 1;
@@ -174,10 +224,13 @@ window.onload = function(){
 		}
 		function jump10(){
 			args.cam.position.y = 0;
-		}
-		
-		
-		
+		}	
 	}
-	
+	setInterval(function(){
+		var testX = Math.random()*100;
+		var testY = Math.random()*1000;
+		var testZ = Math.random()*-200;
+		args.cube.position.set(testX,testY,testZ);
+		args.renderer.render(args.scn,args.cam);
+	},10);
 }
