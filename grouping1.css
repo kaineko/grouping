@@ -64,41 +64,41 @@ p{
 	background-color:#CFF;
 	border:1.5px solid #000;
 	min-height:20px;
-	width:110px;
-	margin:0 5px;
-	padding:5px 5px 0 5px;
+	width:220px;
+	margin:0 10px;
+	padding:10px 10px 0 10px;
 }
 
 .elem{
 	list-style-type:none;
 	background-color:#FFF;
 	border:1px solid #99C;
-	font-size:7.5px;
-	height:20px;
-	line-height:20px;
-	width:110px;
-	margin-bottom:5px;
+	font-size:15px;
+	height:40px;
+	line-height:40px;
+	width:220px;
+	margin-bottom:10px;
 }
 
 #check{
-    font-size:10px;
+    font-size:20px;
 }
 
 #checkContents{
     background-color:#8F8;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #boxContents{
     background-color:#F88;
-    margin:5px 0 0 5px;
-    min-height:488px;
+    margin:10px 0 0 10px;
+    min-height:976px;
 }
 
 .on_tasks{
 	list-style-type:none;
 	background-color:#EEE;
-	height:20px;
-	width:110px;
-	margin-bottom:5px;
+	height:40px;
+	width:220px;
+	margin-bottom:10px;
 }
