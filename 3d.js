@@ -227,10 +227,23 @@ setInterval(function(){
 		}	
 	}
 	setInterval(function(){
-		var testX = Math.random()*100;
-		var testY = Math.random()*1000;
-		var testZ = Math.random()*-200;
-		args.cube.position.set(testX,testY,testZ);
+		var testX2 = Math.random()*100;
+		var testY2 = Math.random()*1000;
+		var testZ2 = Math.random()*-200;
+		args.cube2.position.set(testX2,testY2,testZ2);
+		var i = 1;
+		if (i === 1){
+			var testX += 10;
+			if( testX >100){
+				i= -1;
+			}
+		} else if (i === -1){
+			var testX += 10;
+			if(testX < -100){
+				i = 1;
+			}
+		}
+		args.cube.position.set(testX,0,0);
 		args.renderer.render(args.scn,args.cam);
 	},10);
 }
