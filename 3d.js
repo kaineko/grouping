@@ -25,7 +25,7 @@ function set_renderer(){
 
 	var cameraX = 0;
 	var cameraY = 0;
-	var cameraZ = 0;
+	var cameraZ = -50;
 	var cameraToX = 0;
 	var cameraToY = 0;
 	var cameraToZ = 0;
@@ -37,7 +37,7 @@ function camera(){
 	args.cam.position.y = cameraY;
 	args.cam.position.z = cameraY;
 	
-	args.cam.lookAt({x: cameraX - cameraToX,y: cameraY - cameraToY,z: cameraZ - cameraToX })
+	args.cam.lookAt({x:0,y: 0,z: 0 })
 }
 
 function scene(){
