@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html lang = "ja">
-	<head>
-		<meta charset = "UTF-8">
-		<title>仲間分けテスト</title>
-		<link rel = "stylesheet" href = "grouping.css">
-		<script src = "jquery.js"></script>
-		<script src = "jqueryUI.js"></script>
-		<script src= "jqueryuiA.js"></script>
-		<script src = "grouping.js"></script>
-	</head>
-	<body>
-		<p>カードをドラッグして	正しく分類して下さい</p>
-		<div id = "main-contents">
-		<div class = "attr">
-			<span>真菌</span>
-			<br>
-			<br>
-			<ul id = "fungus" class = "tasks">
-				<li class = "fungus elem">カンジダ</li>
-				<li class = "spirochaete elem">レプトスピラ</li>
-				<li class = "protozoan elem">マラリア</li>
-				<li class = "protozoan elem">トリコモナス</li>
-			</ul>
-		</div>
-		<div class = "attr">
-			<span>スピロヘータ</span>
-			<br>
-			<br>
-			<ul id = "spirochaete" class = "tasks">
-				<li class = "protozoan elem">赤痢アメーバ</li>
-				<li class = "spirochaete elem">ボレリア</li>
-				<li class = "fungus elem">クリプトコックス</li>
-				<li class = "protozoan elem">トキソプラズマ</li>
-				<li class = "fungus elem">ムコール症</li>
-			</ul>
-		</div>
-		<div class = "attr">
-			<span>原虫</span>
-			<br>
-			<br>
-			<ul id = "protozoan" class = "tasks">
-				<li class = "fungus elem">アスペルギルス</li>
-				<li class = "spirochaete elem">トレポネーマ</li>
-				<li class = "fungus elem">ニューモシスチス・イロベチ</li>
-				<li class = "protozoan elem">クリプトスポリジウム</li>
-			</ul>
-		</div>
-		</div>
-	</body>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src = "jquery.js"></script>
+    <script src = "index.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button id = "menu">Menu</button>
+    <div id = "left">
+        <div id = "panel"> 
+            <div id = "homepage">
+                <span>Home</span>
+            </div>
+            <div id = "bacteriumpage">
+                <span>細菌</span>
+            </div>
+            <div id = "otherspage">
+                <span>真菌<br>スピロヘータ<br>原虫</span>
+            </div>
+        </div>
+    </div>
+    <div id = "readme">
+        <div id = "title">
+            <h2>微生物分類チェックアプリ</h2>
+        </div>
+        <div id = "explain">
+        <br>
+        <br>
+        シンプルな微生物分類チェックアプリです。
+        <br>
+        現在以下の2つの分類を実装しています。
+        <br>
+       ・細菌（陰性桿菌を除く）
+        <br>
+        ・真菌・スピロヘータ・原虫
+        </div>
+    </div>
+</body>
 </html>
