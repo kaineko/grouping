@@ -25,7 +25,7 @@ function set_renderer(){
 
 	var cameraX = 0;
 	var cameraY = 0;
-	var cameraZ = -50;
+	var cameraZ = 100;
 	var cameraToX = 0;
 	var cameraToY = 0;
 	var cameraToZ = 0;
@@ -35,7 +35,7 @@ function camera(){
 	
 	args.cam.position.x = cameraX;
 	args.cam.position.y = cameraY;
-	args.cam.position.z = cameraY;
+	args.cam.position.z = cameraZ;
 	
 	args.cam.lookAt({x:0,y: 0,z: 0 })
 }
@@ -64,7 +64,7 @@ function set_obj(){
 		new THREE.CubeGeometry(30,30,30),
 		new THREE.MeshLambertMaterial({color:0x66FF66})
 	);
-	args.cube.position.set(0,0,0);
+	args.cube.position.set(100,0,-40);
 	args.scn.add(args.cube);
 	
 	
@@ -226,24 +226,25 @@ setInterval(function(){
 			args.cam.position.y = 0;
 		}	
 	}
+	var i = 1;
+	var testX = 100;
 	setInterval(function(){
 		var testX2 = Math.random()*100;
 		var testY2 = Math.random()*1000;
 		var testZ2 = Math.random()*-200;
 		args.cube2.position.set(testX2,testY2,testZ2);
-		var i = 1;
-		if (i === 1){
-			var testX += 10;
-			if( testX >100){
+				if (i === 1){
+			testX += 0.5;
+			if( testX >300){
 				i= -1;
 			}
 		} else if (i === -1){
-			var testX += 10;
-			if(testX < -100){
+			testX -= 0.5;
+			if(testX < -120){
 				i = 1;
 			}
 		}
-		args.cube.position.set(testX,0,0);
+		args.cube.position.set(testX,0,-40);
 		args.renderer.render(args.scn,args.cam);
 	},10);
 }
