@@ -44,14 +44,14 @@
 }
 
 #readme{
- margin:0 0 0 500px ;
 }
 #title{
     text-align: center;
 }
 h2{
-    font-size:15px;
+    font-size:30px;
 }
 #explain{
-    font-size:10px;
+    font-size:15px;
+    margin:100px 0 0 500px ;
 }
