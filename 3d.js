@@ -229,10 +229,6 @@ setInterval(function(){
 	var i = 1;
 	var testX = 100;
 	setInterval(function(){
-		var testX2 = Math.random()*100;
-		var testY2 = Math.random()*1000;
-		var testZ2 = Math.random()*-200;
-		args.cube2.position.set(testX2,testY2,testZ2);
 				if (i === 1){
 			testX += 0.5;
 			if( testX >300){
@@ -247,4 +243,10 @@ setInterval(function(){
 		args.cube.position.set(testX,0,-40);
 		args.renderer.render(args.scn,args.cam);
 	},10);
+	setInterval(function(){
+		var testX2 = Math.random()*100;
+		var testY2 = Math.random()*100;
+		var testZ2 = Math.random()*-200;
+		args.cube2.position.set(testX2,testY2,testZ2);
+	},300);
 }
