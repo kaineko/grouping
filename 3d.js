@@ -120,7 +120,7 @@ function set_obj(){
 	
 	args.cube3 = new THREE.Mesh(
 		new THREE.CubeGeometry(100,20,30),
-		new THREE.MeshLambertMaterial({color:0xFF6611})
+		new THREE.MeshLambertMaterial({color:0x99FF11})
 	)
 	args.cube3.position.set(-150,0,-160);
 	args.scn.add(args.cube3);
